@@ -1,0 +1,22 @@
+  {
+    "name": "EZ Decrapifier",
+    "version": "1.0",
+    "description": "Make EZ great again (MEGA)",
+    "permissions": ["storage","contextMenus","tabs"],
+    "background": {
+      "scripts": ["background.js"]
+    },
+    "browser_action": {
+      "default_title": "Options",
+      "default_popup": "options.html"
+    },
+    "content_scripts": [{
+      "js": ["content.js"],
+      "matches": ["https://ez.analog.com/*"]
+    }],
+    "options_ui": {
+      "page": "options.html",
+      "open_in_tab": false
+    },
+    "manifest_version": 2
+  }
